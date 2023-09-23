@@ -6,7 +6,7 @@
 
 (define (badge topic)
     `(li ([class "mr-1.5 mt-2"])
-		(div ([class "flex items-center rounded-full bg-[#DC755C]/10 px-3 py-1 text-xs font-medium leading-5 text-[#ecb1a2]"]) ,topic)))
+		(div ([class "flex items-center rounded-full bg-[#E28E78]/10 px-3 py-1 text-xs font-medium leading-5 text-[#E28E78]"]) ,topic)))
 
 (define (->badges topics)
   (let ([top-list (map (curry string-trim #:left? #t) 
