@@ -22,27 +22,36 @@
                         (path ([d "M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z"])))
                 (span ,name))))
 
-(define (relevant-links links)
-  (let ([names (map (λ (pair) (car pair)) links)]
+(define/match (relevant-links links)
+  [('()) ""]
+  [(links) (let ([names (map (λ (pair) (car pair)) links)]
         [hrefs (map (λ (pair) (cdr pair)) links)])
     `(ul ([class "mt-2 flex flex-wrap"] [aria-label "Related links"])
-         ,(for/splice ([name names] [href hrefs]) (relevant-link name href)))))
+         ,(for/splice ([name names] [href hrefs]) (relevant-link name href))))])
 
 
-(define (card role #:organization [org ""] #:link [link ""]
-              #:timespan [timespan ""] #:links [links '(("" . ""))] #:topics [topics ""]
+(define (card area #:position [pos ""] #:organization [org ""] #:link [link ""]
+              #:timespan [timespan ""] #:links [links '()] #:topics [topics ""]
+              #:image-src [image-src ""]
               . text)
     `(li ([class "mb-12"])
         (div ([class "group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"])
             (div ([class "absolute -inset-x-4 -inset-y-4 z-0 rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] group-hover:drop-shadow-lg"]))
-            (header ([class "z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"]) ,timespan)
-            (div ([class "z-10 sm:col-span-6"])
+            ,(when/splice (not (equal? timespan ""))
+                          `(header ([class "z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"]) ,timespan))
+            ,(when/splice (not (equal? image-src ""))
+                          `(img ([class "w-20 mb-2 rounded hover:drop-shadow sm:order-1 sm:col-span-2 sm:translate-y-1"] [loading "lazy"] [data-nimg "1"] [width "200"] [height "48"] [src ,image-src])))
+            (div ([class "z-10 sm:col-span-6 order-0 sm:order-2"])
                 (h3 ([class "font-medium leading-snug text-zinc-200"])
                     (div (a ([class "inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"] [href ,link] [target "_blank"] [rel "noreferrer"])
                             (span ([class "absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"]))
-                            (span ,role
-                                    (span ([class "inline-block"])
-                                        ,org)))))
+                            (span ,area
+                                  ,(when/splice (not (equal? org ""))
+                                    `(@ 
+                                        (span ([class "px-1"]) "|")
+                                        (span ([class "inline-block"]) ,org))))))
+                    (div ([class "text-zinc-500"])
+                         (span ,pos)))
                 (p ([class "mt-2 text-sm leading-normal"])
                     ,@text)
                 ,(relevant-links links)
