@@ -3,7 +3,7 @@
 ◊`(div ([class "lg:flex lg:justify-between lg:gap-4"])
        (header ([class "lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"])
 	(div
-		(h1 ([class "text-4xl uppercase font-light tracking-wide text-zinc-200 sm:text-5xl"])
+		(h1 ([class "text-3xl uppercase font-light tracking-wide text-zinc-200 sm:text-4xl"])
 		    "Beat Hagenlocher")
 		(h2 ([class "mt-2 text-lg text-zinc-200 sm:text-xl"])
 		    "Software Engineering Student")
