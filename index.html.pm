@@ -11,9 +11,9 @@
 			"I enjoy learning.")
 	)
 
-	(section ([id "about"] [class "mb-16 scroll-mt-16 lg:mb-0 lg:scroll-mt-0"] [aria-label "About me"])
+	(section ([id "about"] [class "mb-16 group/section scroll-mt-16"] [aria-label "About me"])
 			 (div ([class "sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:px-1 lg:py-1 lg:top-auto lg:mx-auto lg:w-full"])
-			 	  (h2 ([class "text-base font-medium text-zinc-200 transition duration-200 ease-in-out hover:text-[#dc755c] uppercase tracking-[2px]"])
+			 	  (h2 ([class "pt-3 px-1 text-base font-medium text-zinc-200 transition duration-500 ease-in-out uppercase tracking-[2px] border-transparent border-t-2 border-solid group-hover/section:text-[#dc755c] group-hover/section:border-[#DC755C]"])
 				      "About"))
 			 (div 
 			 	  (p ([class "mb-4"])
@@ -40,24 +40,12 @@
 
 
 (main ([class "pt-24 lg:w-1/2 lg:py-24"])
-	(section ([id "experience"] [class "group/section mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"] [aria-label "Work Experience"])
-			 (div ([class "sticky top-0 z-20 -mx-6 mb-4 w-screen px-5 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:px-0 lg:top-auto lg:mx-auto lg:w-full"])
-			 	  (h2 ([class "pt-3 px-1 text-base font-medium text-zinc-200 transition duration-500 ease-in-out uppercase tracking-[2px] border-transparent border-t-2 border-solid group-hover/section:text-[#dc755c] group-hover/section:border-[#DC755C]"])
-				      "Experience"))
-			 (div 
-			 	  (ol ([class "group/list"])
-				      ,(card "Software Development" #:position "Working Student" #:organization "Hacker School" #:link "https://hacker-school.de" #:timespan "Feb 2021 - Mar 2023" #:topics "Racket, Sociocracy, Teaching" "This is some serious text.")
-				      ,(card "Software Architecture" #:position "Intern" #:organization "active group GmbH" #:link "https://active-group.de" #:timespan "Mar - May 2020" #:links '(("active group" . "https://active-group.de")) #:topics "Haskell, Clojure, magit" "This is some serious text.")
-				      ,(card "Innovation Hacking" #:position "Intern" #:organization "TNG Technology Consulting" #:link "https://www.tngtech.com/" #:timespan "Dez 2019 - Mar 2020" #:topics "C#, Python, Unity, Reinforcement Learning, Tensorflow" "This is some serious text.")
-					  )
-				))
-	(section ([id "projects"] [class "mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"] [aria-label "Selected Projects"])
-			 (div ([class "sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:px-1 lg:top-auto lg:mx-auto lg:w-full"])
-			 	  (h2 ([class "text-base font-medium text-zinc-200 transition duration-200 ease-in-out hover:text-[#dc755c] uppercase tracking-[2px]"])
-				      "Projects"))
-			 (div 
-			 	  (ol ([class "group/list"])
-					  ,(card "Mastering 42" #:link "https://haglobah.github.io/Mastering-42/" #:topics "Racket, Pollen, Tailwind" #:image-src "https://haglobah.github.io/Mastering-42/src/Images/42_logo.png")
+	,(section "Experience" "Work Experience"
+		(card "Software Development" #:position "Working Student" #:organization "Hacker School" #:link "https://hacker-school.de" #:timespan "Feb 2021 - Mar 2023" #:topics "Racket, Sociocracy, Teaching" "This is some serious text.")
+		(card "Software Architecture" #:position "Intern" #:organization "active group GmbH" #:link "https://active-group.de" #:timespan "Mar - May 2020" #:links '(("active group" . "https://active-group.de")) #:topics "Haskell, Clojure, magit" "This is some serious text.")
+		(card "Innovation Hacking" #:position "Intern" #:organization "TNG Technology Consulting" #:link "https://www.tngtech.com/" #:timespan "Dez 2019 - Mar 2020" #:topics "C#, Python, Unity, Reinforcement Learning, Tensorflow" "This is some serious text."))
+	,(section "Projects" "Selected Projects"
+		(card "Mastering 42" #:link "https://haglobah.github.io/Mastering-42/" #:topics "Racket, Pollen, Tailwind" #:image-src "https://haglobah.github.io/Mastering-42/src/Images/42_logo.png")
 				)))
 	(footer ([class ""]))
   )
