@@ -12,7 +12,7 @@
 	)
 
 	(section ([id "about"] [class "mb-16 group/section scroll-mt-16"] [aria-label "About me"])
-			 (div ([class "sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:px-1 lg:py-1 lg:top-auto lg:mx-auto lg:w-full"])
+			 (div ([class "sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:px-1 lg:py-1 lg:mx-0 lg:w-5/6"])
 			 	  (h2 ([class "pt-3 px-1 text-base font-medium text-zinc-200 transition duration-500 ease-in-out uppercase tracking-[2px] border-transparent border-t-2 border-solid group-hover/section:text-[#dc755c] group-hover/section:border-[#DC755C]"])
 				      "About"))
 			 (div 
@@ -40,18 +40,28 @@
 
 
   (main ([class "pt-24 lg:w-1/2 lg:py-24"])
+	,(section "Skills & Abilites" "Relevant Skills & Abilites"
+		(card #:description "Programming Languages" #:topics "Elixir, Racket, Haskell, C, Clojure, Rust") 
+		(card #:description "Programming" #:topics "Git, Docker, Nix, Functional Programming, Tailwind CSS") 
+		(card #:description "Organizational Development" #:topics "Sociocracy, The Lean Startup, Start with Why, Reinventing Organizations") 
+		(card #:description "Design" #:topics "Design Thinking, Systems Design, Designing your Life") 
+		)
+
 	,(section "Experience" "Work Experience"
-		(card #:timespan "Programming Languages" #:topics "Elixir, Racket, Haskell, C, Clojure, Rust"
-			  "")
-		(card #:title "Software Development" #:position "Working Student" #:organization "Hacker School" #:link "https://hacker-school.de" #:timespan "Feb 2021 - Mar 2023" #:topics "Racket, Sociocracy, Teaching"
-			  "This is some serious text.")
-		(card #:title "Software Architecture" #:position "Intern" #:organization "active group GmbH" #:link "https://active-group.de" #:timespan "Mar - May 2020" #:links '(("active group" . "https://active-group.de")) #:topics "Haskell, Clojure, magit"
-			  "This is some serious text.")
-		(card #:title "Innovation Hacking" #:position "Intern" #:organization "TNG Technology Consulting" #:link "https://www.tngtech.com/" #:timespan "Dez 2019 - Mar 2020" #:topics "C#, Python, Unity, Reinforcement Learning, Tensorflow"
-			  "This is some serious text."))
+		(card #:title "Software Development" #:position "Working Student" #:organization "Hacker School" #:link "https://hacker-school.de" #:description "Feb 2021 - Mar 2023" #:links '(("Course website (DE)" . "https://konzepte.hacker-school.de")) #:topics "Racket, Pollen, Sociocracy, Teaching"
+			  "Developed courses and the accompanying course website. Introduced a knowledge base system.")
+		(card #:title "Software Architecture" #:position "Intern" #:organization "active group GmbH" #:link "https://active-group.de" #:description "Mar - May 2020" #:topics "Haskell, Clojure, Machine Learning, Emacs, magit"
+			  "Implemented a Web Server for a Machine Learning Project in Haskell. Developed parts of a project frontend in ClojureScript.")
+		(card #:title "Innovation Hacking" #:position "Intern" #:organization "TNG Technology Consulting" #:link "https://www.tngtech.com/" #:description "Dez 2019 - Mar 2020" #:topics "C#, Python, Unity, Reinforcement Learning, Tensorflow"
+			  "Developed AI Agents for the Game Blobby VR. Looked after the TNG booth at OOP 2020."))
+
 	,(section "Projects" "Selected Projects"
-		(card #:title "Mastering 42" #:link "https://haglobah.github.io/Mastering-42/" #:topics "Racket, Pollen, Tailwind" #:image-src "https://haglobah.github.io/Mastering-42/src/Images/42_logo.png")
-				)
+		(card #:title "Mastering 42" #:link "https://haglobah.github.io/Mastering-42/" #:topics "Racket, Pollen, Tailwind" #:image-src "https://haglobah.github.io/Mastering-42/src/Images/42_logo.png"
+			"An attempt to supply the context missing from the projects of the Common Core at 42 School.")
+		(card #:title "ft_transcendence" #:link "https://github.com/haglobah/transcendence" #:topics "Elixir, Phoenix LiveView, PostgreSQL (Ecto), Tailwind"
+			"The final project of the Common Core at 42: A Web App for playing Pong with friends. (still has some rough edges)")
+	)
+
 	(footer ([class "max-w-md pb-16 text-sm text-zinc-500 sm:pb-0"])
 		(p ([class "mb-1"])
 		   "Written in " ,(footer-link "Visual Studio Code" "https://code.visualstudio.com/") " with a " ,(footer-link "rae-dux Keyboard" "https://github.com/andrewjrae/rae-dux") " + " ,(footer-link "Custom Layout" "https://github.com/haglobah/zmk-config") " while standing upright thanks to " ,(footer-link "Ben Vallack" "https://www.youtube.com/watch?v=iOupyi-lQZM") ". Built with  " ,(footer-link "Racket" "https://racket-lang.com") ", " ,(footer-link "Pollen" "https://pollenpub.com") " and " ,(footer-link "Tailwind CSS" "https://tailwindcss.com") ".")
