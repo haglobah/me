@@ -64,7 +64,7 @@
 
 	(footer ([class "max-w-md pb-16 text-sm text-zinc-500 sm:pb-0"])
 		(p ([class "mb-1"])
-		   "Written in " ,(footer-link "Visual Studio Code" "https://code.visualstudio.com/") " with a " ,(footer-link "rae-dux Keyboard" "https://github.com/andrewjrae/rae-dux") " + " ,(footer-link "Custom Layout" "https://github.com/haglobah/zmk-config") " while standing upright thanks to " ,(footer-link "Ben Vallack" "https://www.youtube.com/watch?v=iOupyi-lQZM") ". Built with  " ,(footer-link "Racket" "https://racket-lang.com") ", " ,(footer-link "Pollen" "https://pollenpub.com") " and " ,(footer-link "Tailwind CSS" "https://tailwindcss.com") ".")
+		   "Written in " ,(footer-link "Visual Studio Code" "https://code.visualstudio.com/") " with a " ,(footer-link "rae-dux Keyboard" "https://github.com/andrewjrae/rae-dux") " + " ,(footer-link "Custom Layout" "https://github.com/haglobah/zmk-config") " while standing upright thanks to " ,(footer-link "Ben Vallack" "https://www.youtube.com/watch?v=iOupyi-lQZM") ". Built with  " ,(footer-link "Racket" "https://racket-lang.com") ", " ,(footer-link "Pollen" "https://pollenpub.com") " and " ,(footer-link "Tailwind CSS" "https://tailwindcss.com") " on " ,(footer-link "NixOS" "https://nixos.org/") ".")
 		(p "Layout & Design heavily inspired by " ,(footer-link "Brittany Chiang" "https://brittanychiang.com") "."))
   )
 )
