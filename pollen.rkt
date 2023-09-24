@@ -5,7 +5,7 @@
 (provide (all-defined-out))
 
 (define (badge topic)
-    `(li ([class "mr-1.5 mt-2"])
+    `(li ([class "mr-1.5 mb-2"])
 		(div ([class "flex items-center rounded-full bg-[#E28E78]/10 px-3 py-1 text-xs font-medium leading-5 text-[#E28E78]"]) ,topic)))
 
 (define (->badges topics)
@@ -39,14 +39,14 @@
 
 
 (define (card #:title [title ""] #:position [pos ""] #:organization [org ""] #:link [link ""]
-              #:timespan [timespan ""] #:links [links '()] #:topics [topics ""]
+              #:description [description ""] #:links [links '()] #:topics [topics ""]
               #:image-src [image-src ""]
               . text)
     `(li ([class "mb-12"])
         (div ([class "group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"])
             (div ([class "absolute -inset-x-4 -inset-y-4 z-0 rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] group-hover:drop-shadow-lg"]))
-            ,(when/splice (not (equal? timespan ""))
-                          `(header ([class "z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-zinc-500 sm:col-span-2"]) ,timespan))
+            ,(when/splice (not (equal? description ""))
+                          `(header ([class "z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-zinc-500 sm:col-span-2"]) ,description))
             ,(when/splice (not (equal? image-src ""))
                           `(img ([class "w-20 mb-2 rounded hover:drop-shadow sm:order-1 sm:col-span-2 sm:translate-y-1"] [loading "lazy"] [data-nimg "1"] [width "200"] [height "48"] [src ,image-src])))
             (div ([class "z-10 sm:col-span-6 order-0 sm:order-2"])
@@ -61,8 +61,9 @@
                                         (span ([class "inline-block"]) ,org))))))
                     (div ([class "text-zinc-500"])
                          (span ,pos))))
-                (p ([class "text-sm leading-normal"])
-                    ,@text)
+                ,(when/splice (pair? text) 
+                  `(p ([class "mb-4 text-sm leading-normal"])
+                    ,@text))
                 ,(relevant-links links)
                 ,(->badges topics)))))
 
