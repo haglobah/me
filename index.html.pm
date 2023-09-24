@@ -1,7 +1,7 @@
 #lang pollen
 
 ◊`(div ([class "lg:flex lg:justify-between lg:gap-4"])
-       (header ([class "lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"])
+  (header ([class "lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"])
 	(div
 		(h1 ([class "text-3xl uppercase font-light tracking-wide text-zinc-200 sm:text-4xl"])
 		    "Beat Hagenlocher")
@@ -39,7 +39,7 @@
   )
 
 
-(main ([class "pt-24 lg:w-1/2 lg:py-24"])
+  (main ([class "pt-24 lg:w-1/2 lg:py-24"])
 	,(section "Experience" "Work Experience"
 		(card "Software Development" #:position "Working Student" #:organization "Hacker School" #:link "https://hacker-school.de" #:timespan "Feb 2021 - Mar 2023" #:topics "Racket, Sociocracy, Teaching"
 			  "This is some serious text.")
@@ -49,7 +49,10 @@
 			  "This is some serious text."))
 	,(section "Projects" "Selected Projects"
 		(card "Mastering 42" #:link "https://haglobah.github.io/Mastering-42/" #:topics "Racket, Pollen, Tailwind" #:image-src "https://haglobah.github.io/Mastering-42/src/Images/42_logo.png")
-				)))
-	(footer ([class ""]))
+				)
+	(footer ([class "max-w-md pb-16 text-sm text-zinc-500 sm:pb-0"])
+		(p ([class "mb-1"])
+		   "Written in " ,(footer-link "Visual Studio Code" "https://code.visualstudio.com/") " with a " ,(footer-link "rae-dux Keyboard" "https://github.com/andrewjrae/rae-dux") " + " ,(footer-link "Custom Layout" "https://github.com/haglobah/zmk-config") " while standing upright thanks to " ,(footer-link "Ben Vallack" "https://www.youtube.com/watch?v=iOupyi-lQZM") ". Built with  " ,(footer-link "Racket" "https://racket-lang.com") ", " ,(footer-link "Pollen" "https://pollenpub.com") " and " ,(footer-link "Tailwind CSS" "https://tailwindcss.com") ".")
+		(p "Layout & Design heavily inspired by " ,(footer-link "Brittany Chiang" "https://brittanychiang.com") "."))
   )
 )
