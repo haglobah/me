@@ -34,7 +34,7 @@
   [('()) ""]
   [(links) (let ([names (map (λ (pair) (car pair)) links)]
         [hrefs (map (λ (pair) (cdr pair)) links)])
-    `(ul ([class "mt-2 flex flex-wrap"] [aria-label "Related links"])
+    `(ul ([class "mb-2 flex flex-wrap"] [aria-label "Related links"])
          ,(for/splice ([name names] [href hrefs]) (relevant-link name href))))])
 
 
