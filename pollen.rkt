@@ -11,7 +11,7 @@
 (define (->badges topics)
   (let ([top-list (map (curry string-trim #:left? #t) 
   					   (string-split topics ","))])
-    `(ul ([class "mt-2 flex flex-wrap"] [aria-label "Tools/Techniques used"])
+    `(ul ([class "flex flex-wrap"] [aria-label "Tools/Techniques used"])
          ,(for/splice ([topic top-list]) (badge topic)))))
 
 (define (link text href)
@@ -38,7 +38,7 @@
          ,(for/splice ([name names] [href hrefs]) (relevant-link name href))))])
 
 
-(define (card area #:position [pos ""] #:organization [org ""] #:link [link ""]
+(define (card #:title [title ""] #:position [pos ""] #:organization [org ""] #:link [link ""]
               #:timespan [timespan ""] #:links [links '()] #:topics [topics ""]
               #:image-src [image-src ""]
               . text)
@@ -50,17 +50,18 @@
             ,(when/splice (not (equal? image-src ""))
                           `(img ([class "w-20 mb-2 rounded hover:drop-shadow sm:order-1 sm:col-span-2 sm:translate-y-1"] [loading "lazy"] [data-nimg "1"] [width "200"] [height "48"] [src ,image-src])))
             (div ([class "z-10 sm:col-span-6 order-0 sm:order-2"])
-                (h3 ([class "font-medium leading-snug text-zinc-200"])
+                ,(when/splice (not (equal? title ""))
+                  `(h3 ([class "mb-2 font-medium leading-snug text-zinc-200"])
                     (div (a ([class "inline-flex items-baseline font-medium leading-tight text-zinc-200 hover:text-[#9BBEFF] focus-visible:text-[#9BBEFF] group/link text-base"] [href ,link] [target "_blank"] [rel "noreferrer"])
                             (span ([class "absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"]))
-                            (span ,area
+                            (span ,title
                                   ,(when/splice (not (equal? org ""))
                                     `(@ 
                                         (span ([class "px-1"]) "|")
                                         (span ([class "inline-block"]) ,org))))))
                     (div ([class "text-zinc-500"])
-                         (span ,pos)))
-                (p ([class "mt-2 text-sm leading-normal"])
+                         (span ,pos))))
+                (p ([class "text-sm leading-normal"])
                     ,@text)
                 ,(relevant-links links)
                 ,(->badges topics)))))

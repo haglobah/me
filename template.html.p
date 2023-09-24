@@ -40,7 +40,6 @@
 
 	<link rel="stylesheet" href="fonts.css"> 
 	<script src="https://cdn.tailwindcss.com"></script>
-	<script src="./main.js" defer></script>
   </head>
   ◊(->html `(body ([class "bg-[#282D3F] leading-relaxed text-zinc-400 antialiased
 						   font-fira-sans
