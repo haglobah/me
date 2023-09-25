@@ -50,7 +50,7 @@
 		)
 
 	,(section "Experience" "Work Experience"
-		(card #:title "Software Development" #:position "Working Student" #:organization "Hacker School" #:link "https://hacker-school.de" #:description "Feb 2021 - Mar 2023" #:links '(("Course website (DE)" . "https://konzepte.hacker-school.de")) #:topics "Racket, Pollen, Sociocracy, Teaching"
+		(card #:title "Software Development" #:position "Working Student" #:organization "Hacker School" #:link "https://hacker-school.de" #:description "Feb 2021 - Mar 2023" #:links '(("Course website" . "https://konzepte.hacker-school.de")) #:topics "Racket, Pollen, Sociocracy, Teaching"
 			  "Developed courses and the accompanying course website. Introduced a knowledge base system.")
 		(card #:title "Software Architecture" #:position "Intern" #:organization "active group GmbH" #:link "https://active-group.de" #:description "Mar - May 2020" #:topics "Haskell, Clojure, Machine Learning, Emacs, magit"
 			  "Implemented a Web Server for a Machine Learning Project in Haskell. Developed parts of a project frontend in ClojureScript.")
