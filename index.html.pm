@@ -63,11 +63,16 @@
 	)
 
 	,(section "Education" "My Education"
-		(card #:title "42 Heilbronn" #:position "Student" #:description "Mar 2022 - today" #:link "https://42heilbronn.de" #:topics "C, C++, Docker, Elixir, Racket"
+		(card #:title "42 Heilbronn" #:description "Mar 2022 - today" #:link "https://42heilbronn.de" #:topics "C, C++, Docker, Elixir, Racket"
 			  )
-		(card #:title "ETH Zurich" #:position "BSc Physics" #:description "Sep 2020 - Feb 2022" #:link "https://ethz.ch/en.html" #:links '(("rootlinks" . "https://rootlinks.ch"))
+		(card #:title "BSc Physics" #:organization "ETH Zurich" #:description "Sep 2020 - Feb 2022" #:link "https://ethz.ch/en.html" #:links '(("rootlinks" . "https://rootlinks.ch"))
 			  `(p ([class "mb-2"]) "Up until the 3rd semester.")
 			  `(p ([class "italic"]) "03/21 - 07/21 Participation in the rootlinks program."))
+		(card #:title "Studium generale et sociale" #:organization "Leibniz Kolleg Tübingen" #:link "https://uni-tuebingen.de/en/einrichtungen/verwaltung/stabsstellen/leibniz-kolleg/das-leibniz-kolleg/" #:description "Oct 2018 - July 2019"
+			  )
+		(card #:title "Carlo-Schmid-Gymnasium Tübingen" #:link "https://www.csg-tuebingen.de/" #:description "2010 - 2018"
+			`(p "Final grade: 1,0")
+			`(p "Received a price for the best Abitur in Chemistry."))
 	)
 
 	(footer ([class "max-w-md pb-16 text-sm text-zinc-500 sm:pb-0"])
