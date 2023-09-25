@@ -11,17 +11,19 @@
 			"I enjoy learning.")
 	)
 
-	(section ([id "about"] [class "mb-16 group/section scroll-mt-16"] [aria-label "About me"])
+	(section ([id "about"] [class "mb-16 group/section scroll-mt-16 lg:mb-0 lg:scroll-mt-0"] [aria-label "About me"])
 			 (div ([class "sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:px-1 lg:py-1 lg:mx-0 lg:w-5/6"])
 			 	  (h2 ([class "pt-3 px-1 text-base font-medium text-zinc-200 transition duration-500 ease-in-out uppercase tracking-[2px] border-transparent border-t-2 border-solid group-hover/section:text-[#dc755c] group-hover/section:border-[#DC755C]"])
 				      "About"))
-			 (div 
-			 	  (p ([class "mb-4"])
-				     "Story, story")
-			 	  (p ([class "mb-4"])
-				     "Interests, interests")
-			 	  (p ([class "mb-4"])
-				     "Me, me.")
+			 (div ([class "w-11/12"])
+			 	  (p 
+				  	 "Human being on its quest to learn as much as possible and do good in the world.")
+			 	  (p ([class "mt-4"])
+				     "Interested in Education, Macroeconomics, History, Organizational Forms, Distributed Systems, Mathematics, Systems Thinking, Category Theory, and Learning.")
+			 	  (p ([class "mt-4"])
+				     "Currently learning Vim keybindings for " ,(link "Doom Emacs" "https://github.com/doomemacs/doomemacs") " and practicing to type faster.")
+			 	  (p ([class "mt-4"])
+				     "When I'm not at the Computer or deliberately learning something, you can find me on walks with nice people, doing sports, or at my " ,(link "favourite kids camp" "https://www.spatzennest-tuebingen.de/") " during the summer.")
 				))
 
 	(ul ([class "ml-1 mt-8 flex items-center"])
@@ -77,7 +79,7 @@
 
 	(footer ([class "max-w-md pb-16 text-sm text-zinc-500 sm:pb-0"])
 		(p ([class "mb-1"])
-		   "Written in " ,(footer-link "Visual Studio Code" "https://code.visualstudio.com/") " with a " ,(footer-link "rae-dux Keyboard" "https://github.com/andrewjrae/rae-dux") " + " ,(footer-link "Custom Layout" "https://github.com/haglobah/zmk-config") " while standing upright thanks to " ,(footer-link "Ben Vallack" "https://www.youtube.com/watch?v=iOupyi-lQZM") ". Built with  " ,(footer-link "Racket" "https://racket-lang.com") ", " ,(footer-link "Pollen" "https://pollenpub.com") " and " ,(footer-link "Tailwind CSS" "https://tailwindcss.com") " on " ,(footer-link "NixOS" "https://nixos.org/") ".")
+		   "Written in " ,(footer-link "Visual Studio Code" "https://code.visualstudio.com/") " on a " ,(footer-link "rae-dux Keyboard" "https://github.com/andrewjrae/rae-dux") " with " ,(footer-link "Custom Layout" "https://github.com/haglobah/zmk-config") " while standing upright thanks to " ,(footer-link "Ben Vallack" "https://www.youtube.com/watch?v=iOupyi-lQZM") ". Built with  " ,(footer-link "Racket" "https://racket-lang.com") ", " ,(footer-link "Pollen" "https://pollenpub.com") " and " ,(footer-link "Tailwind CSS" "https://tailwindcss.com") " on " ,(footer-link "NixOS" "https://nixos.org/") ".")
 		(p "Layout & Design heavily inspired by " ,(footer-link "Brittany Chiang" "https://brittanychiang.com") "."))
   )
 )
