@@ -15,7 +15,7 @@
 			 (div ([class "sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:px-1 lg:py-1 lg:mx-0 lg:w-5/6"])
 			 	  (h2 ([class "pt-3 px-1 text-base font-medium text-zinc-200 transition duration-500 ease-in-out uppercase tracking-[2px] border-transparent border-t-2 border-solid group-hover/section:text-[#dc755c] group-hover/section:border-[#DC755C]"])
 				      "About"))
-			 (div ([class "w-11/12"])
+			 (div ([class "lg:w-10/12"])
 			 	  (p 
 				  	 "Human being on its quest to learn as much as possible and do good in the world.")
 			 	  (p ([class "mt-4"])
