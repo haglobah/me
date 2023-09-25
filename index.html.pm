@@ -42,7 +42,7 @@
   (main ([class "pt-24 lg:w-1/2 lg:py-24"])
 	,(section "Skills & Abilites" "Relevant Skills & Abilites"
 		(card #:description "Programming Languages" #:topics "Elixir, Racket, Haskell, C, Clojure, Rust") 
-		(card #:description "Programming" #:topics "Git, Docker, Nix, Functional Programming, Tailwind CSS") 
+		(card #:description "Programming" #:topics "Git, Docker, Nix, Functional Programming, Phoenix LiveView, Tailwind CSS") 
 		(card #:description "Organizational Development" #:topics "Sociocracy, The Lean Startup, Start with Why, Reinventing Organizations") 
 		(card #:description "Design" #:topics "Design Thinking, Systems Design, Designing your Life") 
 		)
@@ -58,8 +58,16 @@
 	,(section "Projects" "Selected Projects"
 		(card #:title "Mastering 42" #:link "https://haglobah.github.io/Mastering-42/" #:topics "Racket, Pollen, Tailwind" #:image-src "https://haglobah.github.io/Mastering-42/src/Images/42_logo.png"
 			"An attempt to supply the context missing from the projects of the Common Core at 42 School.")
-		(card #:title "ft_transcendence" #:link "https://github.com/haglobah/transcendence" #:topics "Elixir, Phoenix LiveView, PostgreSQL (Ecto), Tailwind"
-			"The final project of the Common Core at 42: A Web App for playing Pong with friends. (still has some rough edges)")
+		(card #:title "ft_transcendence" #:link "https://github.com/haglobah/transcendence" #:topics "Elixir, Phoenix LiveView, PostgreSQL (Ecto), Tailwind CSS"
+			"The final project of the Common Core at 42: A Web App for playing Pong and chatting (still has some rough edges).")
+	)
+
+	,(section "Education" "My Education"
+		(card #:title "42 Heilbronn" #:position "Student" #:description "Mar 2022 - today" #:link "https://42heilbronn.de" #:topics "C, C++, Docker, Elixir, Racket"
+			  )
+		(card #:title "ETH Zurich" #:position "BSc Physics" #:description "Sep 2020 - Feb 2022" #:link "https://ethz.ch/en.html" #:links '(("rootlinks" . "https://rootlinks.ch"))
+			  `(p ([class "mb-2"]) "Up until the 3rd semester.")
+			  `(p ([class "italic"]) "03/21 - 07/21 Participation in the rootlinks program."))
 	)
 
 	(footer ([class "max-w-md pb-16 text-sm text-zinc-500 sm:pb-0"])
