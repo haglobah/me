@@ -62,7 +62,7 @@
                     (div ([class "text-zinc-500"])
                          (span ,pos))))
                 ,(when/splice (pair? text) 
-                  `(p ([class "mb-4 text-sm leading-normal"])
+                  `(div ([class "mb-4 text-sm leading-normal"])
                     ,@text))
                 ,(relevant-links links)
                 ,(->badges topics)))))
