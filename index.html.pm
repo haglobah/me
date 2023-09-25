@@ -13,7 +13,7 @@
 
 	(section ([id "about"] [class "mb-16 group/section scroll-mt-16 lg:mb-0 lg:scroll-mt-0"] [aria-label "About me"])
 			 (div ([class "sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:px-1 lg:py-1 lg:mx-0 lg:w-5/6"])
-			 	  (h2 ([class "pt-3 px-1 text-base font-medium text-zinc-200 transition duration-500 ease-in-out uppercase tracking-[2px] border-transparent border-t-2 border-solid group-hover/section:text-[#dc755c] group-hover/section:border-[#DC755C]"])
+			 	  (h2 ([class "pt-3 px-1 text-sm group-hover/section:text-base font-medium text-zinc-200 transition-all duration-500 ease-in-out uppercase tracking-[2px] border-transparent border-t-2 border-solid group-hover/section:text-[#dc755c] group-hover/section:border-[#DC755C]"])
 				      "About"))
 			 (div ([class "lg:w-10/12"])
 			 	  (p 
