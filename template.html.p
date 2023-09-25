@@ -1,7 +1,7 @@
 ◊(define title "Beat Hagenlocher")
 ◊(define description "Beat Hagenlocher is a Software Engineering Student who likes to build things with the right tools, and loves to learn.")
 ◊(define image "")
-◊(define url "")
+◊(define url "https://haglobah.github.io/me/")
 ◊(define icon "")
 
 ◊(define space-cadet "#282D3F")
