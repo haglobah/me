@@ -55,7 +55,13 @@
 		(card #:title "Software Architecture" #:position "Intern" #:organization "active group GmbH" #:link "https://active-group.de" #:description "Mar - May 2020" #:topics "Haskell, Clojure, Machine Learning, Emacs, magit"
 			  "Implemented a Web Server for a Machine Learning Project in Haskell. Developed parts of a project frontend in ClojureScript.")
 		(card #:title "Innovation Hacking" #:position "Intern" #:organization "TNG Technology Consulting" #:link "https://www.tngtech.com/" #:description "Dez 2019 - Mar 2020" #:topics "C#, Python, Unity, Reinforcement Learning, Tensorflow"
-			  "Developed AI Agents for the Game Blobby VR. Looked after the TNG booth at OOP 2020."))
+			  "Developed AI Agents for the Game Blobby VR. Looked after the TNG booth at OOP 2020.")
+		(hrule)
+		(card #:position "Course Instructor" #:title "Deutsche SchülerAkademie" #:description "16 Days | June - July 2022" #:link "https://www.schuelerakademien.de/deutsche-schuelerakademie" #:topics "Learning, Teaching"
+			"Designed and taught a 50-hour university-level course called " `(span ([class "italic"]) "How People Learn") ".")
+		(card #:position "Working Member" #:title "rootlinks" #:description "June 2021 - Mar 2022" #:link "https://rootlinks.ch" #:topics "Sociocracy, Design Thinking, Systems Design, Teaching, Coaching, Recruiting"
+			 "Co-created the Learning Journey of two semesters, coached a challenge team, and recruited the 3rd batch.")
+	)
 
 	,(section "Projects" "Selected Projects"
 		(card #:title "Mastering 42" #:link "https://haglobah.github.io/Mastering-42/" #:topics "Racket, Pollen, Tailwind" #:image-src "https://haglobah.github.io/Mastering-42/src/Images/42_logo.png"
