@@ -70,14 +70,17 @@
 (define (hrule)
   `(section ([id ,(string-downcase "delimiter")] [class "group/section"])
 			 (div ([class "sticky top-0 z-20 -mx-6 mb-4 w-screen px-5 pb-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:px-0 lg:top-auto lg:mx-auto lg:w-full"])
-			 	  (h2 ([class "transition duration-500 ease-in-out border-transparent border-t-2 border-solid group-hover/section:text-[#dc755c] group-hover/section:border-[#DC755C]"])
+			 	  (h2 ([class "border-t-2 border-solid border-[#DC755C] lg:border-transparent lg:text-sm lg:text-zinc-200 lg:group-hover/section:text-base lg:transition-all lg:duration-500 lg:ease-in-out lg:group-hover/section:text-[#dc755c] lg:group-hover/section:border-[#DC755C]"])
 				      ""))))
+
+(define (section-title title)
+  `(h2 ([class "pt-3 px-1 text-base font-medium text-[#dc755c] uppercase tracking-[2px] border-t-2 border-solid border-[#DC755C] lg:border-transparent lg:text-sm lg:text-zinc-200 lg:group-hover/section:text-base lg:transition-all lg:duration-500 lg:ease-in-out lg:group-hover/section:text-[#dc755c] lg:group-hover/section:border-[#DC755C]"])
+				      ,title))
 
 (define (section title aria-label . content)
     `(section ([id ,(string-downcase title)] [class "group/section mb-16 scroll-mt-16 md:mb-24 lg:mb-24 lg:scroll-mt-24"] [aria-label ,aria-label])
 			 (div ([class "sticky top-0 z-20 -mx-6 mb-4 w-screen px-5 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:px-0 lg:top-auto lg:mx-auto lg:w-full"])
-			 	  (h2 ([class "pt-3 px-1 text-sm group-hover/section:text-base font-medium text-zinc-200 transition-all duration-500 ease-in-out uppercase tracking-[2px] border-transparent border-t-2 border-solid group-hover/section:text-[#dc755c] group-hover/section:border-[#DC755C]"])
-				      ,title))
+			 	  ,(section-title title))
 			 (div 
 			 	  (ol ([class "group/list"])
 				     ,@content
