@@ -3,18 +3,17 @@
 ◊`(div ([class "lg:flex lg:justify-between lg:gap-4"])
   (header ([class "lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"])
 	(div
-		(h1 ([class "text-3xl uppercase font-light tracking-wide text-zinc-200 sm:text-4xl"])
+		(h1 ([class "text-3xl font-base tracking-wide text-zinc-200 sm:text-4xl"])
 		    "Beat Hagenlocher")
-		(h2 ([class "mt-2 text-lg text-zinc-200 sm:text-xl"])
+		(h2 ([class "mt-2 text-lg text-zinc-200 sm:text-lg"])
 		    "Software Engineering Student")
 		(p ([class "mt-4 max-w-xs leading-normal"])
 			"I enjoy learning.")
 	)
 
 	(section ([id "about"] [class "mb-16 group/section scroll-mt-16 lg:mb-0 lg:scroll-mt-0"] [aria-label "About me"])
-			 (div ([class "sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:px-1 lg:py-1 lg:mx-0 lg:w-5/6"])
-			 	  (h2 ([class "pt-3 px-1 text-sm group-hover/section:text-base font-medium text-zinc-200 transition-all duration-500 ease-in-out uppercase tracking-[2px] border-transparent border-t-2 border-solid group-hover/section:text-[#dc755c] group-hover/section:border-[#DC755C]"])
-				      "About"))
+			 (div ([class "sticky top-0 z-20 -mx-6 mt-8 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:px-1 lg:py-1 lg:mt-0 lg:mb-4 lg:mx-0 lg:w-5/6"])
+			 	  ,(section-title "About"))
 			 (div ([class "lg:w-10/12"])
 			 	  (p 
 				  	 "Human being on its quest to learn as much as possible and do good in the world.")
