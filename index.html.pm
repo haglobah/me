@@ -18,7 +18,7 @@
 			 	  (p 
 				  	 "Human being on its quest to learn as much as possible and do good in the world.")
 			 	  (p ([class "mt-4"])
-				     "Interested in Education, Macroeconomics, History, Organizational Forms, Distributed Systems, Mathematics, Systems Thinking, Category Theory, and Learning.")
+				     "Interested in Education, Macroeconomics, History, Organizational Forms, Distributed Systems, Mathematics, Systems Thinking, Category Theory, Learning and Programming Languages.")
 			 	  (p ([class "mt-4"])
 				     "Currently learning Vim keybindings for " ,(link "Doom Emacs" "https://github.com/doomemacs/doomemacs") " and practicing to type faster.")
 			 	  (p ([class "mt-4"])
@@ -49,7 +49,7 @@
   (main ([class "pt-24 lg:w-1/2 lg:py-24"])
 	,(section "Skills & Abilites" "Relevant Skills & Abilites"
 		(card #:description "Programming Languages" #:topics "Elixir, Racket, Haskell, C, Clojure, Rust") 
-		(card #:description "Programming" #:topics "Git, Docker, Nix, Functional Programming, Phoenix LiveView, Tailwind CSS") 
+		(card #:description "Programming" #:topics "Git, Docker, Nix, Functional Programming, Phoenix LiveView, Tailwind CSS, PostgreSQL (Ecto)") 
 		(card #:description "Organizational Development" #:topics "Sociocracy, The Lean Startup, Start with Why, Reinventing Organizations") 
 		(card #:description "Design" #:topics "Design Thinking, Systems Design, Designing your Life") 
 		)
