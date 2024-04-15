@@ -1,8 +1,8 @@
 #lang pollen
 
 ◊`(div ([class "lg:flex lg:justify-between lg:gap-4"])
-  (header ([class "lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"])
-	(div
+  (header ([class "lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-20"])
+	(div ([class "my-2"])
 		(h1 ([class "text-3xl font-base tracking-wide text-zinc-200 sm:text-4xl"])
 		    "Beat Hagenlocher")
 		(h2 ([class "mt-2 text-lg text-zinc-200 sm:text-lg"])
