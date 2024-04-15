@@ -6,7 +6,7 @@
 		(h1 ([class "text-3xl font-base tracking-wide text-zinc-200 sm:text-4xl"])
 		    "Beat Hagenlocher")
 		(h2 ([class "mt-2 text-lg text-zinc-200 sm:text-lg"])
-		    "Software Engineering Student")
+		    "Software Engineer | Functional Programmer | Founder of " (a ([class "text-zinc-400 font-medium hover:text-[#9BBEFF] focus-visible:text-[#9BBEFF]"] [target "_blank"] [rel "noreferrer"] [href "https://zelium.io"]) "zelium.io"))
 		(p ([class "mt-4 max-w-xs leading-normal"])
 			"I enjoy learning.")
 	)
