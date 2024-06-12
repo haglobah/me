@@ -6,7 +6,10 @@
 		(h1 ([class "text-3xl font-base tracking-wide text-zinc-200 sm:text-4xl"])
 		    "Beat Hagenlocher")
 		(h2 ([class "mt-2 text-lg text-zinc-200 sm:text-lg"])
-		    "Software Engineer | Functional Programmer | Founder of " (a ([class "text-zinc-400 font-medium hover:text-[#9BBEFF] focus-visible:text-[#9BBEFF]"] [target "_blank"] [rel "noreferrer"] [href "https://zelium.io"]) "zelium.io"))
+		    "Software Architect "
+				(a ([class "text-zinc-400 font-medium hover:text-[#9BBEFF] focus-visible:text-[#9BBEFF]"] [target "_blank"] [rel "noreferrer"] [href "https://active-group.de"]) "@active group")
+				" | Building "
+				(a ([class "text-zinc-400 font-medium hover:text-[#9BBEFF] focus-visible:text-[#9BBEFF]"] [target "_blank"] [rel "noreferrer"] [href "https://zelium.io"]) "zelium.io"))
 		(p ([class "mt-4 max-w-xs leading-normal"])
 			"I enjoy learning.")
 	)
@@ -55,6 +58,7 @@
 		)
 
 	,(section "Experience" "Work Experience"
+		(card #:title "Software Architecture" #:position "" #:organization "active group GmbH" #:link "https://active-group.de" #:description "May 2024 - present" #:topics "Clojure, Docker, Nix")
 		(card #:title "Software Development" #:position "Working Student" #:organization "Hacker School" #:link "https://hacker-school.de" #:description "Feb 2021 - Mar 2023" #:links '(("Course website" . "https://konzepte.hacker-school.de")) #:topics "Racket, Pollen, Sociocracy, Teaching"
 			  "Developed courses and the accompanying course website. Introduced a knowledge base system.")
 		(card #:title "Software Architecture" #:position "Intern" #:organization "active group GmbH" #:link "https://active-group.de" #:description "Mar - May 2020" #:topics "Haskell, Clojure, Machine Learning, Emacs, magit"
