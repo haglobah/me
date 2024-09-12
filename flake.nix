@@ -31,6 +31,7 @@
           ];
           packages = [
             pkgs.racket
+            pkgs.nodejs_22
           ];
           devshell.startup = {
             install-langserver.text = ''raco pkg install --auto --skip-installed racket-langserver'';

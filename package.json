@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "unocss --watch",
+    "build": "unocss"
+  },
+  "dependencies": {
+    "unocss": "^0.62.3"
+  }
+}

@@ -39,7 +39,8 @@
 	<link rel="icon" type="image/x-icon" href="◊|icon|">
 
 	<link rel="stylesheet" href="fonts.css"> 
-	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="uno.css">
+	◊; <script src="https://cdn.tailwindcss.com"></script>
   </head>
   ◊(->html `(body ([class "bg-[#282D3F] leading-relaxed text-zinc-400 antialiased
 						   font-fira-sans

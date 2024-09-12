@@ -2,3 +2,5 @@ compiled
 *.html
 
 .direnv
+
+node_modules
