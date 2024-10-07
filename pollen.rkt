@@ -74,8 +74,9 @@
 				      ""))))
 
 (define (section-title title)
-  `(h2 ([class "pt-3 px-1 text-base font-medium text-[#dc755c] uppercase tracking-[2px] border-t-2 border-solid border-[#DC755C] lg:border-transparent lg:text-sm lg:text-zinc-200 lg:group-hover/section:text-base lg:transition-all lg:duration-500 lg:ease-in-out lg:group-hover/section:text-[#dc755c] lg:group-hover/section:border-[#DC755C]"])
-				      ,title))
+  `(div ([class "pt-3 px-1 border-t-2 border-solid border-[#DC755C] lg:border-transparent lg:transition-all lg:duration-500 lg:ease-in-out lg:group-hover/section:border-[#DC755C]"])
+				(h2 ([class "h-5 text-base font-medium text-[#dc755c] uppercase tracking-[2px] lg:text-sm lg:text-zinc-200 lg:group-hover/section:text-base lg:group-hover/section:text-[#dc755c] lg:transition-all lg:duration-500 lg:ease-in-out"])
+            ,title)))
 
 (define (section title aria-label . content)
     `(section ([id ,(string-downcase title)] [class "group/section mb-16 scroll-mt-16 md:mb-24 lg:mb-24 lg:scroll-mt-24"] [aria-label ,aria-label])
