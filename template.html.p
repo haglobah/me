@@ -41,9 +41,9 @@
 	<link rel="stylesheet" href="fonts.css"> 
 	<script src="https://cdn.tailwindcss.com"></script>
   </head>
-  ◊(->html `(body ([class "bg-[#282D3F] leading-relaxed text-zinc-400 antialiased
+  ◊(->html `(body ([class "bg-zinc-800 leading-relaxed text-zinc-400 antialiased
 						   font-fira-sans
-						   selection:bg-[#ecb1a2] selection:text-[#282d3f]"])
+						   selection:bg-[#ecb1a2] selection:text-zinc-700"])
 	              (div ([class "mx-auto min-h-screen max-w-screen-xl px-6 py-12
 				  				md:px-12 md:py-20 lg:px-24 lg:py-0"])
 					   ,doc)))
