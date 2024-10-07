@@ -1,5 +1,5 @@
 ◊(define title "Beat Hagenlocher")
-◊(define description "Beat Hagenlocher is a Software Engineering Student who likes to build things with the right tools, and loves to learn.")
+◊(define description "Beat Hagenlocher is a Software Architect at active group GmbH. He likes to build things with the right tools, and loves to learn.")
 ◊(define image "")
 ◊(define url "https://haglobah.github.io/me/")
 ◊(define icon "")
