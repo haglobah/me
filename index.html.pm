@@ -18,7 +18,7 @@
 			 (div ([class "sticky top-0 z-20 -mx-6 mt-8 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:px-1 lg:py-1 lg:mt-0 lg:mb-4 lg:mx-0 lg:w-5/6"])
 			 	  ,(section-title "About"))
 			 (div ([class "lg:w-10/12"])
-			 	  (p 
+			 	  (p
 				  	 "Human being on its quest to learn as much as possible and do good in the world.")
 			 	  (p ([class "mt-4"])
 				     "Interested in Education, Macroeconomics, History, Organizational Forms, Distributed Systems, Mathematics, Systems Thinking, Category Theory, Learning and Programming Languages.")
@@ -51,10 +51,10 @@
 
   (main ([class "pt-24 lg:w-1/2 lg:py-24"])
 	,(section "Skills & Abilites" "Relevant Skills & Abilites"
-		(card #:description "Programming Languages" #:topics "Elixir, Racket, Haskell, C, Nix, Clojure, Rust") 
-		(card #:description "Programming" #:topics "Git, Docker, NixOS, Functional Programming, Phoenix LiveView, Tailwind CSS, PostgreSQL (Ecto), SurrealDB") 
-		(card #:description "Organizational Development" #:topics "Sociocracy, The Lean Startup, Start with Why, Reinventing Organizations") 
-		(card #:description "Design" #:topics "Design Thinking, Systems Design, Designing your Life") 
+		(card #:description "Programming Languages" #:topics "Elixir, Racket, Haskell, C, Nix, Clojure, Rust")
+		(card #:description "Programming" #:topics "Git, Docker, NixOS, Functional Programming, Phoenix LiveView, Tailwind CSS, PostgreSQL (Ecto), SurrealDB")
+		(card #:description "Organizational Development" #:topics "Sociocracy, The Lean Startup, Start with Why, Reinventing Organizations")
+		(card #:description "Design" #:topics "Design Thinking, Systems Design, Designing your Life")
 		)
 
 	,(section "Experience" "Work Experience"
